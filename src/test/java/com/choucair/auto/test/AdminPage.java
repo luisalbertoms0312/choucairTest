@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
 import com.choucair.auto.template.Template;
 
 public class AdminPage extends Template {
@@ -38,15 +39,15 @@ public class AdminPage extends Template {
 
 	public void GetRoleKey() {
 
-		List<WebElement> roles = driver.findElements(locatorRoleKey);
+		List<WebElement> roles = this.findElements(locatorRoleKey);
 		for (int i = 0; i < roles.size(); i++) {
 			String elements = roles.get(i).getText();
 			System.out.println(elements);
 
-			if (elements.contains("WorkLogCustomers")) {
+			if (elements.contains("WorkLogManagers")) {
 
-				driver.findElements(By.className("s-EditLink")).get(i).click();
-
+				this.findElements(By.xpath("//div[3]/a")).get(i).click();
+				break;
 			}
 		}
 	}

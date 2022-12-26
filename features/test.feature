@@ -9,7 +9,7 @@ Feature: Get acees with correct credentials
   #Then Click on Sign In
   #And Dashbord page is displayed
   
-  Scenario: Verify admin section
+  Scenario: Get all the roles availables
     #When Login section is dispalyed
     Given I open Serenity Login Page Demo
     #When Login section is dispalyed
